@@ -1,0 +1,1 @@
+Faça um programa que leia pelo teclado e mostre na tela o seu tipo primitivo e todas as informações possíveis sobre ele.

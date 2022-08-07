@@ -18,8 +18,8 @@
 ## Cursos
 
 - [Git e GitHub](https://github.com/ThiagoMonts/cursoEmVideo/tree/main/gitGitHub)
-- [Java](https://github.com/ThiagoMonts/dioBootcampSantander/tree/main/Java)
-- [Programação Orientada a Objetos com Java](https://github.com/ThiagoMonts/dioBootcampSantander/tree/main/Java)
+- [Java](link)
+- [Programação Orientada a Objetos com Java](link)
 - [Python](https://github.com/ThiagoMonts/cursoEmVideo/tree/main/Python)
 
 ## Desafios de Código

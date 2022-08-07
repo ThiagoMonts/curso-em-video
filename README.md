@@ -1,5 +1,5 @@
 <div align="center">
-<img src="https://github.com/ThiagoMonts/cursoEmVideo/blob/main/cursoemvideo-logo.png" width="250px"> 
+<img src="https://github.com/ThiagoMonts/cursoEmVideo/blob/main/cursoemvideo-logo.png" width="450px"> 
 </div>
 
 <h1 align="center">Curso em Vídeo</h1>

@@ -13,11 +13,13 @@
 <img src="https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white"/>
 <img src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white"/>
 <img src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=java&logoColor=white">
+<img src="https://img.shields.io/badge/Python-14354C?style=for-the-badge&logo=python&logoColor=white">
 </h3>
 
 ## Cursos
 
 - [Git e GitHub](https://github.com/ThiagoMonts/cursoEmVideo/tree/main/gitGitHub)
+- [HTML e CSS](https://github.com/ThiagoMonts/cursoEmVideo/tree/main/HTML%20e%20CSS/aulas-pdf)
 - [Java](link)
 - [Programação Orientada a Objetos com Java](link)
 - [Python](https://github.com/ThiagoMonts/cursoEmVideo/tree/main/Python)
@@ -27,6 +29,11 @@
 - [Desafios Python](https://github.com/ThiagoMonts/cursoEmVideo/tree/main/Python/desafiosPython)
 
 
-## Conclusão dos Cursos:
-![Certificado de Conclusão](link)
+## Certificados de Conclusão:
+![Java](link)
+![Programação Orientada a Objetos com Java](link)
+![Python - Mundo 01](link)
+![Python - Mundo 02](link)
+![Python - Mundo 03](link)
+
 

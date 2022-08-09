@@ -30,10 +30,10 @@
 
 
 ## Certificados de Conclusão:
-![Java](link)
-![Programação Orientada a Objetos com Java](link)
-![Python - Mundo 01](link)
-![Python - Mundo 02](link)
-![Python - Mundo 03](link)
+![Java](https://github.com/ThiagoMonts/cursoEmVideo/blob/main/Certificados/Thiago-Honorato-da-Silva-Java-Basico-40-Horas-Certificado-Curso-em-Video.pdf)
+![Programação Orientada a Objetos com Java](https://github.com/ThiagoMonts/cursoEmVideo/blob/main/Certificados/Thiago-Honorato-da-Silva-Java-POO-40-Horas-Certificado-Curso-em-Video.pdf)
+![Python - Mundo 01](https://github.com/ThiagoMonts/cursoEmVideo/blob/main/Certificados/Thiago-Honorato-da-Silva-Python-3-8211-Mundo-1-40-Horas-Certificado-Curso-em-Video.pdf)
+![Python - Mundo 02](https://github.com/ThiagoMonts/cursoEmVideo/blob/main/Certificados/Thiago-Honorato-da-Silva-Python-3-8211-Mundo-2-40-Horas-Certificado-Curso-em-Video.pdf)
+![Python - Mundo 03](https://github.com/ThiagoMonts/cursoEmVideo/blob/main/Certificados/Thiago-Honorato-da-Silva-Python-3-8211-Mundo-3-40-Horas-Certificado-Curso-em-Video.pdf)
 
 

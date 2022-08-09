@@ -3,7 +3,7 @@
 </div>
 
 <h1 align="center">Curso em Vídeo</h1>
-<h4 align="justify"> O curso em vídeo é um projeto desenvolvido pelo Professor Gustavo Guanabara, onde o foco são os cursos voltados para a área de tecnologia. </h4>
+<h4 align="justify"> O Curso em Vídeo é um projeto desenvolvido pelo Professor Gustavo Guanabara, onde o foco são os cursos voltados para a área de tecnologia. </h4>
 
 <h3 align="center">
 ⚙️ Tecnologias utilizadas

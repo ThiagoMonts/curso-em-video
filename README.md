@@ -19,8 +19,8 @@
 ## Cursos
 
 - [Git e GitHub](https://github.com/ThiagoMonts/cursoEmVideo/tree/main/gitGitHub)
-- [HTML e CSS](https://github.com/ThiagoMonts/cursoEmVideo/tree/main/HTML%20e%20CSS/aulas-pdf)
-- [Java](link)
+- [HTML e CSS](https://github.com/ThiagoMonts/cursoEmVideo/tree/main/HTML%20e%20CSS)
+- [Java](https://github.com/ThiagoMonts/cursoEmVideo/tree/main/Java)
 - [Programação Orientada a Objetos com Java](link)
 - [Python](https://github.com/ThiagoMonts/cursoEmVideo/tree/main/Python)
 

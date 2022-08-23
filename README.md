@@ -21,7 +21,7 @@
 - [Git e GitHub](https://github.com/ThiagoMonts/cursoEmVideo/tree/main/gitGitHub)
 - [HTML e CSS](https://github.com/ThiagoMonts/cursoEmVideo/tree/main/HTML%20e%20CSS)
 - [Java](https://github.com/ThiagoMonts/cursoEmVideo/tree/main/Java)
-- [Programação Orientada a Objetos com Java](link)
+- [Programação Orientada a Objetos com Java](https://github.com/ThiagoMonts/cursoEmVideo/tree/main/Programa%C3%A7%C3%A3o%20Orientada%20a%20Objetos%20Java)
 - [Python](https://github.com/ThiagoMonts/cursoEmVideo/tree/main/Python)
 
 ## Desafios de Código

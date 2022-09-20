@@ -18,25 +18,25 @@
 
 ## Cursos
 
-- [Git e GitHub](https://github.com/ThiagoMonts/cursoEmVideo/tree/main/gitGitHub)
-- [HTML e CSS](https://github.com/ThiagoMonts/cursoEmVideo/tree/main/HTML%20e%20CSS)
-- [Java](https://github.com/ThiagoMonts/cursoEmVideo/tree/main/Java)
-- [JavaScript](https://github.com/ThiagoMonts/cursoEmVideo/tree/main/javascript/exercicios)
-- [Programação Orientada a Objetos com Java](https://github.com/ThiagoMonts/cursoEmVideo/tree/main/Programa%C3%A7%C3%A3o%20Orientada%20a%20Objetos%20Java)
-- [Python](https://github.com/ThiagoMonts/cursoEmVideo/tree/main/Python)
+- [Git e GitHub](https://github.com/ThiagoMonts/curso-em-video/tree/main/git-github)
+- [HTML e CSS](https://github.com/ThiagoMonts/curso-em-video/tree/main/html-css)
+- [Java](https://github.com/ThiagoMonts/curso-em-video/tree/main/Java)
+- [JavaScript](https://github.com/ThiagoMonts/curso-em-video/tree/main/javascript)
+- [Programação Orientada a Objetos com Java](https://github.com/ThiagoMonts/curso-em-video/tree/main/poo-Java)
+- [Python](https://github.com/ThiagoMonts/curso-em-video/tree/main/python)
 
 ## Desafios de Código
 
-- [Desafios Python](https://github.com/ThiagoMonts/cursoEmVideo/tree/main/Python/desafiosPython)
+- [Desafios Python](https://github.com/ThiagoMonts/curso-em-video/tree/main/python/desafios-python)
 
 
 ## Certificados de Conclusão:
-- [HTML5 e CSS3 - Módulo 01](https://thiagomonts.github.io/cursoEmVideo/Certificados/Thiago-Honorato-da-Silva-HTML5-e-CSS3-Modulo-1-de-5-VIP-Certificado-Curso-em-Video.pdf)
-- [HTML5 e CSS3 - Módulo 02](https://thiagomonts.github.io/cursoEmVideo/Certificados/Thiago-Honorato-da-Silva-HTML5-e-CSS3-Modulo-2-de-5-VIP-Certificado-Curso-em-Video.pdf)
-- [HTML5 e CSS3 - Módulo 03](https://thiagomonts.github.io/cursoEmVideo/Certificados/Thiago-Honorato-da-Silva-HTML5-e-CSS3-Modulo-3-de-5-VIP-Certificado-Curso-em-Video.pdf)
-- [Java](https://thiagomonts.github.io/cursoEmVideo/Certificados/Thiago-Honorato-da-Silva-Java-POO-40-Horas-Certificado-Curso-em-Video.pdf)
-- [JavaScript](https://thiagomonts.github.io/cursoEmVideo/Certificados/Thiago-Honorato-da-Silva-Javascript-40-Horas-Certificado-Curso-em-Video.pdf)
-- [Programação Orientada a Objetos com Java](https://thiagomonts.github.io/cursoEmVideo/Certificados/Thiago-Honorato-da-Silva-Java-POO-40-Horas-Certificado-Curso-em-Video.pdf)
-- [Python - Mundo 01](https://thiagomonts.github.io/cursoEmVideo/Certificados/Thiago-Honorato-da-Silva-Python-3-8211-Mundo-1-40-Horas-Certificado-Curso-em-Video.pdf)
-- [Python - Mundo 02](https://thiagomonts.github.io/cursoEmVideo/Certificados/Thiago-Honorato-da-Silva-Python-3-8211-Mundo-2-40-Horas-Certificado-Curso-em-Video.pdf)
-- [Python - Mundo 03](https://thiagomonts.github.io/cursoEmVideo/Certificados/Thiago-Honorato-da-Silva-Python-3-8211-Mundo-3-40-Horas-Certificado-Curso-em-Video.pdf)
+- [HTML5 e CSS3 - Módulo 01](https://thiagomonts.github.io/curso-em-video/Certificados/Thiago-Honorato-da-Silva-HTML5-e-CSS3-Modulo-1-de-5-VIP-Certificado-Curso-em-Video.pdf)
+- [HTML5 e CSS3 - Módulo 02](https://thiagomonts.github.io/curso-em-video/Certificados/Thiago-Honorato-da-Silva-HTML5-e-CSS3-Modulo-2-de-5-VIP-Certificado-Curso-em-Video.pdf)
+- [HTML5 e CSS3 - Módulo 03](https://thiagomonts.github.io/curso-em-video/Certificados/Thiago-Honorato-da-Silva-HTML5-e-CSS3-Modulo-3-de-5-VIP-Certificado-Curso-em-Video.pdf)
+- [Java](https://thiagomonts.github.io/curso-em-video/Certificados/Thiago-Honorato-da-Silva-Java-POO-40-Horas-Certificado-Curso-em-Video.pdf)
+- [JavaScript](https://thiagomonts.github.io/curso-em-video/Certificados/Thiago-Honorato-da-Silva-Javascript-40-Horas-Certificado-Curso-em-Video.pdf)
+- [Programação Orientada a Objetos com Java](https://thiagomonts.github.io/curso-em-video/Certificados/Thiago-Honorato-da-Silva-Java-POO-40-Horas-Certificado-Curso-em-Video.pdf)
+- [Python - Mundo 01](https://thiagomonts.github.io/curso-em-video/Certificados/Thiago-Honorato-da-Silva-Python-3-8211-Mundo-1-40-Horas-Certificado-Curso-em-Video.pdf)
+- [Python - Mundo 02](https://thiagomonts.github.io/curso-em-video/Certificados/Thiago-Honorato-da-Silva-Python-3-8211-Mundo-2-40-Horas-Certificado-Curso-em-Video.pdf)
+- [Python - Mundo 03](https://thiagomonts.github.io/curso-em-video/Certificados/Thiago-Honorato-da-Silva-Python-3-8211-Mundo-3-40-Horas-Certificado-Curso-em-Video.pdf)

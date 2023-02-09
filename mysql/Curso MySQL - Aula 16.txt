@@ -1,0 +1,31 @@
+create table gafanhoto_assiste_curso (
+	id int not null auto_increment,
+    data date,
+    idgafanhoto int,
+    idcurso int,
+    primary key (id),
+    foreign key (idgafanhoto) references gafanhotos(id),
+    foreign key (idcurso) references cursos(idcurso)
+)
+
+Será criada uma tabela "gafanhoto_assiste_curso", nela teremos 2 atributos (id e data) e mais 2 atributos que serão chaves estrangeiras (idgafanhoto e idcurso)
+Lembrar que sempre que for utilizada a chave estrangeira, eu devo indicar a que campo ela se refere, para isso eu utilizo o "references"
+
+Para inserir os dados na tabela, uso os mesmos comandos aprendidos anteriormente "insert into"
+insert into gafanhoto_assiste_curso values 
+(default, '2014-03-01', '1', '2');
+
+Junções
+select g.id, g.nome, a.idgafanhoto from gafanhotos g
+join gafanhoto_assiste_curso a
+on g.id = a.idgafanhoto;
+Nesse caso, eu quero exibir o id do gafanhoto (g.id), o nome do gafanhoto (g.nome) e o id do curso (idcurso)
+O join irá unir as tabelas e o 'on' indica por qual registro eles serão linkados.
+
+Só que eu quero unir com mais uma tabela (nesse caso a 3ª) para poder mostrar o nome do curso.
+select g.nome, c.nome from gafanhotos g
+join gafanhoto_assiste_curso a
+on g.id = a.idgafanhoto
+join cursos c
+on c.idcurso = a.idcurso
+order by g.nome;

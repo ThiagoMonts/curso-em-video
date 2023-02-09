@@ -1,0 +1,77 @@
+Curso MySQL - Aula 11 (Select)
+
+Para importar um banco de dados, seleciona a opção "Server", depois "Data import", marca a opção "Import from Self-Contained File", 
+depois "..." e seleciona onde o arquivo está, após isso, clica em "Start Import"
+Atualiza o schema e o banco de dados deve estar disponível.
+
+Se eu digito o comando "select * from cursos", eu quero que todas as colunas do cadastro cursos sejam selecionadas.
+
+Se eu quiser ordenar os dados por algum campo específico, terei que digitar:
+"select * from cursos
+order by + nome do campo;" nesse caso, ordenarei pelo campo nome, ficando "order by nome"
+
+Por padrão a ordem é pela chave primária, se eu específico algum campo no order by, este será ordenado em ordem crescente.
+Para ordenar de forma crescente, basta não colocar nada ou o comando "asc"
+Se eu utilizar o comando desc, após o campo, ele será ordenado na ordem decrescente.
+"select * from cursos
+order by + nome do campo + desc;"
+
+Se eu quiser mostrar apenas as colunas específicas, posso utilizar o comando:
+select + as colunas que quero exibir + from cursos
+No caso, utilizarei:
+select nome, carga, ano from cursos
+order by nome;
+Inclusive na ordem que eu quiser
+
+Para ordernar com mais de um campo como parâmetro, posso utilizar o
+order by + "os campos que quero separados por vírgula"
+No caso, "order by ano, nome;"
+
+
+Para filtrar as linhas, devo usar a cláusula "where + campo"
+select * from cursos
+where ano = '2016'
+order by nome;
+
+Para filtrar tanto por linhas, quanto por colunas, utilizo:
+select nome, carga from cursos
+where ano = '2016'
+order by nome;
+
+Posso também utilizar regras condições condicionais nas buscas
+select nome, descricao from cursos
+where ano <= '2015'
+order by nome;
+Neste caso, quero fazer uma busca nos dados que possuam um ano menor ou igual a 2015, mostrando apenas as colunas nome e descrição
+
+Operadores relacionais básicos: maior, menor, igual, diferente (!= ou <>)
+
+Outros operadores relacionais:
+between:
+No between eu vou especificar faixas de valores
+Posso utilizar o comando "between" para mostrar os dados dentro de um intervalo específico
+select nome, ano from cursos
+where ano between 2014 and 2016
+order by ano desc, nome asc;
+Nesse caso irá mostrar os cursos entre o ano de 2014 e 2016
+Utilizei os comandos para ordernar por ano de maneira decrescente e o campo nome de maneira crescente
+
+in:
+No in eu posso colocar valores específicos
+select nome, descricao, ano from cursos
+where ano in (2014, 2016)
+order by ano;
+
+Operadores lógicos:
+Posso combinar as condições 
+and - irá exibir o que atende as duas condições, um E outro.
+select nome, carga, totaulas from cursos
+where carga > 35 and totaulas < 30;
+Neste caso, eu quero que sejam exibidos os cursos que possuem a carga maior que 35 E o totaulas seja menor que 30
+
+or - irá exibir o que atende uma condição ou a outra.
+select nome, carga, totaulas from cursos
+where carga > 35 or totaulas < 30;
+Neste caso, eu quero que sejam exibidos os cursos que possuem a carga maior que 35 OU o totaulas seja menor que 30
+
+Para alguns autores o Select é um comando de DML, entretanto para outros, o select inaugura uma nova categoria, que seria a DQL - Data Query language (Guanabara entende da segunda forma)

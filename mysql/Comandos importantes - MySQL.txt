@@ -1,0 +1,198 @@
+Curso de MySQL
+
+Comandos importantes:
+
+"create database" + nome do banco de dados - cria um banco de dados
+"drop database" + nome do banco de dados - apaga um banco de dados
+
+o ";" é o que indica o final de um comando
+
+para a criação de um novo banco de dados com alguns parametros iniciais, pode ser feito assim:
+
+create database cadastro - indica a criação do banco de dados
+default character set utf8 - define o utf8 como codificação de caracteres por padrão
+default collate utf8_general_ci; - define um collation padrão
+
+Atualmente as configurações já estão setadas para o UTF8 mais recente, portanto essas duas últimas linhas são dispensáveis 
+
+
+constrains são regras que vão definir a criação de coisas no banco de dados
+
+No banco de dados é necessário utilizar um chave única, para isso deve usar a expressão
+"primary key ()" e dentro dos parenteses você coloca a chave (pode ser um ID, matrícula, CPF...)
+
+"auto_increment" é uma constrain que serve para ir aumentando um valor a cada nova inserção no bando de dados.
+
+
+Para o bando de dados o que está entre aspas são dados, o que não está entre aspas são considerados constrains
+
+
+para inserir os dados, usamos:
+
+"insert into" + nome da tabela
+"value" + os valos da tabela
+
+Não preciso informar o id, pq já usei a constrains auto_increment
+
+Para exibir os dados da tabela eu uso:
+"select * from" + mais o nome da tabela
+
+Se os dados que pretendo inserir estão na ordem, não preciso informar os campos, posso digitar direto
+"insert into" + nome da tabela + "values"
+e os dados
+
+Posso também adicionar vários registro de uma vez só, basta digitar os dados normalmente entre parenteses e no final no lugar de ";", 
+coloco ",", entre cada pessoa, só na última que eu coloco o ";"
+
+
+DDL (Data Definition Language) - São comandos de definição de dados, como create database, create table.
+DML (Data Manipulation Language) - São comandos de manipulação de dados, como insert into.
+
+
+
+Alterando a estrutura da tabela
+para adicionar uma coluna:
+"alter table" + nome da tabela - comando para alterar a tabela
+"add column" + mais coluna que você deseja inserir
+
+pode se usar o comando "describe" ou apenas "desc" para mostrar os campos da tabela.
+"describe + nome da tabela", por exemplo
+
+para remover uma coluna:
+"alter table" + nome da tabela - comando para alterar a tabela
+"drop column" + nome da coluna que você deseja eliminar
+
+Para inserir uma coluna em uma posição especifica, utilizo a expressão "after" + o nome do campo anterior
+Por exemplo: Quero inserir a coluna "profissão" depois do campo "nome", faço:
+alter table pessoas
+add column profissao varchar(10) after nome;
+
+Não existe o comando "before", portanto se eu quiser adicionar um campo no ínicio da tabela, tenho que usar o comando "first":
+alter table pessoas
+add column codigo int first;
+
+Para adicionar uma coluna a palavra "column" é opcional, posso digitar apenas "add" + o nome da coluna desejada
+
+
+Para alterar a estrutura da definição, utilizo a expressão "modify", com ela posso alterar o tipo primitivo do campo e todas as constrains, só não consigo renomear o campo, para isso é utilizada outra expressão
+alter table pessoas
+modify column profissao varchar(20);
+
+Se os registros que já estão na tabela forem nulos e ao modificar uma estrutura receber o aviso de que não é possível, eu adiciono a expressão "not null default '' "
+alter table pessoas
+modify column profissao varchar(20) not null default '';
+
+Para renomear o nome de uma coluna, suas constrains e seu tipo primitivo, no lugar do "modify" irei usar "change"
+todavia o change tem uma especificidade, você precisa colocar o nome velho e o nome novo, se não for mudar o nome da coluna, 
+melhor usar o "modify", pois permite mudar apenas o tipo primitivo e as constrains
+
+alter table pessoas
+change column profissao prof varchar(20);
+
+Se utilizar o change, tem que renomear a coluna e todas as constrains que tinha anteriormente.
+
+
+Para renomear a tabela inteira, também vai utilizar o comando "alter table" + o nome da tabela
+e o comando "rename to" + mais o nome que você deseja
+
+
+Criando mais uma tabela:
+Não confundir o primary key com unique, aquele também é unique, mas possui outros atributos, este não irá permitir que dois registros possuam o mesmo nome.
+unsigned - significa sem sinal, irá economizar o bit de sinal, evita dados negativos quando não forem necessários.
+
+
+Se eu uso a expressão "if not exists", a tabela só será criada se ela não existir, sem esse atributo, eu poderia equivocadamente sobrescrever uma tabela e perder todos seus atributos
+"create table if not exists" + nome da tabela (teste int);
+
+Posso adicionar uma coluna no ínicio, utilizando o:
+alter table cursos
+add column idcurso int first;
+
+Não consigo adicionar uma coluna no ínicio e identificá-la como primária, preciso de 2 comandos para isso
+alter table cursos
+add primary key (idcurso);
+
+
+Apagando a tabela inteira
+"drop table if exists" + nome da tabela;
+Irá apagar a tabela toda com todos os registros com um único comando
+
+
+alter table e drop table são comandos DDL
+
+Manipulando registros, também chamados de linhas ou tuplas
+Para modificar uma linha é utilizado o comando 
+"update" + nome da tabela 
+set "nome" = 'HTML5'
+where idcurso = '1';
+
+Se eu quiser mudar 2 ou mais registros na mesma linha, o comando é bem similar ao anterior, irei separar os registros por ','
+"update" + nome da tabela 
+set "nome" = 'PHP', ano = '2015'
+where idcurso = '4'
+limit 1; - Esse limit indica quantas linhas serão afetadas (se tiver mais de um registro com a mesma chave, apenas o primeiro será afetado)
+
+Se eu não usar o limit, todas as linhas serão afetadas
+
+Nunca fazer modificações em um banco de dados ativo, o ideal é criar um backup e fazer as alterações nele
+
+
+Removendo uma linha
+delete from + "nome da tabela"
+where idcurso = '8'
+
+Muito cuidado com esse comando, pois é impossível desfazê-lo
+
+
+Removendo todas as linhas de uma tabela *Cuidado*
+truncate table cursos ou apenas truncate cursos
+
+update, delete e truncate são comandos DML
+
+Então qual é a diferença entre drop table e truncate?
+O drop table apaga a tabela inteira, ou seja, apaga os dados e a estrutura da tabela, já o truncate apaga os dados, mas mantém a estrutura lá.
+
+
+Gerenciando cópias de segurança
+Clica em "Server", depois "Data Export", seleciona o "Schema" desejado
+O backup de um banco de dados é chamado de "dump"
+Ao gerar o dump, você pode escolher se quer exportar a estrutura e os dados, apenas estrutura ou apenas os dados
+Depois você pode escolher se quer exportar o projeto inteiro ou se apenas um arquivo único
+Ao selecionar a opção "Include Create Schema", vai fazer com que o banco de dados seja criado e o dump seja importado diretamente, sem essa configuração
+antes de importar o bando de dados, você terá que digitar "create database" + nome do banco, para só então poder importá-lo.
+
+A senha padrão é vazia para o usuário root
+
+No dump irá constar todo o passo a passo da pessoa que criou o banco de dados, tudo que ele fez, com todos os comandos, até chegar naquele ponto.
+
+Para importar um banco de dados
+Clica em "Server", depois "Data import"
+Seleciona o dump, espera o carregamento, e atualiza o Schemas, o banco de dados deve aparecer
+
+Utilizando o Console do Wampserver (MySQL)
+Clica com o botão esquerdo em cima do ícone do Wampserver, no canto inferior direitom, perto do relógio
+Depois em "MySQL" e "MySQL console", por padrão o usuário é "root" e a senha é vazia, só apertar enter.
+
+Dentro do console, para mostrar os bancos de dados disponíveis no servidor, você utiliza o comando "show databases;"
+Por padrão, temos: information_schema, mysql e performance_schema.
+Para saber qual o banco de dados que está sendo usado no momento, você utiliza o comando "status"
+Inicialmente, nenhum banco de dados estará aberto, para selecionar o banco de dados, você utilizará o comando "use", tal qual no MySQL Workbench
+No nosso caso, usaremos "use cadastro" que foi o banco de dados criado anteriormente
+
+Para mostrar as tabelas, utilizamos o comando "show tables"
+Paa exibir a estrutura de uma tabela, usamos o comando "describe + nome da tabela" da mesma forma do MySQL Workbench
+Todos os comandos usados anteriormente no MySQL Workbench podem ser usados no terminal, pois o banco de dados não está em um aplicativo, está em um servidor, o que vai 
+mudar é apenas onde os dados serão exibidos
+
+Como usar o phpMyAdmin
+Clicando no icone do wampserver, basta selecionar a opção "phpMyAdmin"
+O usuário é root, a senha padrão é vazia
+Dentro do phpMyAdmin, na barra lateral esquerda, tem a opção "novo" para criar um banco de dados novo.
+Depois disso, irá aparecer uma janela para criar uma tabela e o número de colunas desejado
+Na próxima janela, já irá aparecer uma estrutura montada, onde você vai definir os tipos de dado
+
+No console, se você usar o comando "show create table amigos;", você verá quais os comandos foram utilizados para criar esta tabela
+
+Se eu quiser saber quais foram os comandos usados para criar o banco de dados, utilizo o comando "show create database exemplo"
+
+

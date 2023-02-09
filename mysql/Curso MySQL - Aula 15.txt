@@ -1,0 +1,66 @@
+InnoDB é uma Engine (máquina de criação de tabelas)
+A principal característica dessa Engine é suportar chaves estrangeiras
+
+Existem outros exemplos de máquinas de criação de tabelas como o MyISAM (mais antiga) e a XtraDB (mais recente), todas essas três engines são usadas
+para a criação de tabelas e também são compatíveis com chaves estrangeiras.
+
+A InnoDB e a XtraDB suportam o ACID, que são as quatro principais regras de uma boa transação, o MyISAN não.
+Tudo aquilo que você pedir a um banco de dados e ele te dar uma resposta é considerado uma transação.
+
+E para que a transação possa acontecer ela precisa seguir as 4 principais regras (ACID)
+
+A - Atomicidade (Não pode ser dividida em subtarefas, ou tudo acontece ou nada é considerado)
+C - Consistência (Um banco de dados que estava consistente anteriormente, tem que continuar assim após uma transação, se isso não acontecer tudo é desfeito e volta-se ao estado anterior)
+I - Isolamento (Quando duas transações estão acontecendo em paralelo, elas devem acontecer como se estivem sendo executadas de maneira isoladas, uma não pode afetar a outra)
+D - Durabilidade (Uma transação tem que ser durável, ou seja, ela tem que durar o tempo que for necessário)
+
+
+Adicionando a Foreign Key (Chave estrangeira)
+alter table gafanhotos
+add column cursopreferido int;
+Nesse caso será adicionada a coluna na tabela gafanhotos
+
+alter table gafanhotos
+add foreign key (cursopreferido)
+references cursos(idcurso);
+Com isso, será adicionada a chave estrangeira, tendo como referência o 'idcurso' da tabela 'cursos'
+
+Ao dar um describe na tabela gafanhotos, você vai perceber no campo key, a indicação 'MUL', que nesse caso significa chave múltipla, fazendo referência a chave estrangeira.
+
+update gafanhotos set cursopreferido = '6' where id = '1';
+Nesse caso, estou atualizando a tabela, indicando que o curso de 'MySQL' (idcurso = 6) é o curso preferido de 'Daniel Morais' (id = 1)
+
+Integridade Referencial
+Se eu tentar apagar um curso que é o curso preferido de alguém, isso será negado, será apresentado uma mensagem de erro.
+Ou seja, eu não consigo apagar um campo, se ele for afetar a minha transação.
+delete from cursos where idcurso = '6';
+
+
+Join
+
+select gafanhotos.nome, cursos.nome, cursos.ano 
+from gafanhotos join cursos
+on cursos.idcurso = gafanhotos.cursopreferido;
+
+Nesse caso eu estou determinando quais colunas eu quero exibir e posteriormente, indico qual a chave primária que irá corresponder a chave estrangeira.
+sempre que eu utilizar o comando 'join', tenho que fazer essa ligação com o 'on', senão todos os campos serão unidos e a lista ficará enorme, sem mostrar o que realmente eu desejo.
+
+Posso escrever apenas 'join' ou 'inner join'
+
+Posso utilizar o comando 'as', sempre depois do from, e indicar qual será o 'apelido' daquele campo, para que assim não precise digitar toda a palavra, toda vez que for me referir a ela. Por exemplo:
+select g.nome, c.nome, c.ano 
+from gafanhotos as g join cursos as c
+on c.idcurso = g.cursopreferido
+order by g.nome;
+
+Outer join
+Vai tratar os conceitos do inner junto com aqueles dados que não tem relação com nenhuma outra tabela
+select g.nome, c.nome, c.ano 
+from gafanhotos as g left outer join cursos as c
+on c.idcurso = g.cursopreferido;
+Sempre que eu utilizar o outer join, eu tenho que indicar qual é a tabela que terá preferência, nesse caso, como eu coloquei o 'left', a tabela de preferência será a dos gafanhotos.
+Não preciso utilizar a palavra 'outer' posso apenas colocar o 'left join'
+Se eu colocar o 'right' irei dar preferência a tabela ao lado direito, que no caso é o cursos.
+
+Se eu utilizar apenas 'join' estou me referindo ao 'inner join'
+Se eu utilizar 'left' ou 'right' estou me referindo ao 'outer join'

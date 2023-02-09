@@ -1,0 +1,60 @@
+Comando Like
+Se eu quiser procurar alguma linha, registro ou tupla que se inicie com alguma letra específica, usarei o comando "like"
+select * from cursos
+where nome like 'P%';
+Selecione todos os campos da tabela cursos, onde o nome se pareça com 'p' seguido de qualquer coisa, inclusive de nada.
+Vale lembrar que é comando é case sensitive (tanto faz utilizar letra maiúscula ou minúscula)
+O caracter coringa '%' pode ser utilizado em diversas posições
+
+select * from cursos
+where nome like '%a';
+Nesse caso, será mostrado todos os campos da tabela cursos, onde o nome se encerre com a letra 'a'.
+
+select * from cursos
+where nome like '%a%';
+Nesse caso, será mostrado todos os campos da tabela cursos, onde exista a letra 'a' em qualquer lugar.
+
+select * from cursos
+where nome not like '%a%';
+Será mostrado os cursos onde não tem a letra 'a' em nenhum lugar.
+
+select * from cursos
+where nome not like 'PH%P';
+Nesse caso, será mostrado todos os cursos que comecem com 'PH' e terminem com 'P'
+
+Outro Wildcards é o '_' (sublinhado)
+Nele a busca irá procurar por algum caractere naquela posição, pode ser uma letra, um número...
+select * from cursos
+where nome like 'PH%P_';
+
+Distinct (distingue uma ocorrência das demais, não levando em consideração quantas vezes ela se repete)
+select distinct nacionalidade from gafanhotos;
+Nesse caso, irá mostrar apenas uma ocorrência de cada nacionalidade.
+
+Funções de agregação
+Count
+select count(*) from cursos;
+Nesse caso não irá mostrar os registros, apenas contá-los.
+
+select count(*) from cursos where carga > 40;
+Será exibido a quantidade de registros que possuem uma carga maior que 40
+
+Max
+select max(carga) from cursos order by carga;
+Será mostrada a maior carga entre os cursos
+
+Min
+select min(carga) from cursos order by carga;
+Será mostrada a menor carga entre os cursos
+
+Se eu quiser saber o nome do curso que teve o menor total de aulas, posso usar o seguinte comando:
+select nome, min(totaulas) from cursos where ano = '2016';
+
+Sum
+select sum(totaulas) from cursos where ano = '2016';
+Irá mostrar o somatório do total de aulas de todos os cursos de 2016
+
+Avg
+select avg(totaulas) from cursos where ano = '2016';
+Irá mostrar a média do total de aulas
+

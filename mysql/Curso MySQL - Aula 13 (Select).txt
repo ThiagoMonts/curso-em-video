@@ -1,0 +1,30 @@
+Agrupando registros
+select carga from cursos
+group by carga;
+Nesse caso, será agrupada por carga todas as tuplas
+
+Agrupando e agregando
+
+Para saber quantos registros eu tenho em cada agrupamento
+select totaulas, count(*) from cursos
+group by totaulas
+order by totaulas;
+
+No agrupamento é possível utilizar as funções de conjunto com ele (como por exemplo, count), já no distinct, isso não é possível.
+
+Posso também utilizar o "having" para exibir apenas os registros que atendam determinado requisito.
+select carga, count(nome) from cursos
+group by carga
+having count(nome) > 3;
+Nesse caso, será mostrado os registros que aparecem mais de 3 vezes
+
+Dentro do "having" eu só posso utilizar o campo que eu agrupei.
+
+Posso utilizar vários selects combinados, por exemplo:
+select carga, count(*) from cursos
+where ano > 2015
+group by carga
+having carga > (select avg(carga) from cursos);
+Nesse caso eu estou selecionando a carga e o total de horas dos cursos, onde o ano seja acima de 2015
+vou agrupá-los por carga, mas eu quero mostrar apenas quem está acima da média da carga.
+

@@ -37,6 +37,7 @@
 - [HTML5 e CSS3 - Módulo 01](https://thiagomonts.github.io/curso-em-video/Certificados/Thiago-Honorato-da-Silva-HTML5-e-CSS3-Modulo-1-de-5-VIP-Certificado-Curso-em-Video.pdf)
 - [HTML5 e CSS3 - Módulo 02](https://thiagomonts.github.io/curso-em-video/Certificados/Thiago-Honorato-da-Silva-HTML5-e-CSS3-Modulo-2-de-5-VIP-Certificado-Curso-em-Video.pdf)
 - [HTML5 e CSS3 - Módulo 03](https://thiagomonts.github.io/curso-em-video/Certificados/Thiago-Honorato-da-Silva-HTML5-e-CSS3-Modulo-3-de-5-VIP-Certificado-Curso-em-Video.pdf)
+- [HTML5 e CSS3 - Módulo 04](https://thiagomonts.github.io/curso-em-video/Certificados/Thiago-Honorato-da-Silva-HTML5-e-CSS3-Modulo-4-de-5-VIP-Certificado-Curso-em-Video.pdf)
 - [Java](https://thiagomonts.github.io/curso-em-video/Certificados/Thiago-Honorato-da-Silva-Java-Basico-40-Horas-Certificado-Curso-em-Video.pdf)
 - [JavaScript](https://thiagomonts.github.io/curso-em-video/Certificados/Thiago-Honorato-da-Silva-Javascript-40-Horas-Certificado-Curso-em-Video.pdf)
 - [MySQL](https://thiagomonts.github.io/curso-em-video/Certificados/Thiago-Honorato-da-Silva-MySQL-40-Horas-Certificado-Curso-em-Video.pdf)
